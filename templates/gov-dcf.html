@@ -1,0 +1,77 @@
+{% extends "/layout.html" %} {%block body%}
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link Frameworks" aria-current="page" href="/gov-dcf">Frameworks</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/gov-dcf-controls">Controls</a>
+  </li>
+</ul>
+    <div class="mx-3 pt-3">
+              <div class="btn-group" role="group" id="framework-btn-group" aria-label="frame-workgroup">
+                <a href="/gov-dcf" class="btn btn-primary active" aria-current="page">Active frameworks</a>
+                <!-- Button trigger add-framework modal -->
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#add-frame-modal">+</button>
+                <!-- Button trigger add-framework modal -->
+                <button type="button" class="btn btn-secondary">-</button>
+              </div>
+          </div>
+    </div>
+
+<!-- add-framework Modal -->
+<div class="modal fade" id="add-frame-modal" tabindex="-1" aria-labelledby="add-frame-modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="add-frame-modallabel">Framework Form Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="add-framework-form" class="form-label">Framework Name</label>
+          <input type="text" class="form-control" id="add-framework-form" placeholder="Enter framework title..">
+        </div>
+        <div class="mb-3">
+          <label for="add-framework-form" class="form-label">Type</label>
+          <input type="text" class="form-control" id="add-framework-form" placeholder="Enter framework type..">
+        </div>
+        <div class="mb-3">
+          <label for="frameworkFormControlTextarea1" class="form-label">Description</label>
+          <textarea class="form-control" id="frameworkFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Framework</th>
+                <th scope="col">Type</th>
+                <th scope="col" colspan="2">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Regulatory</td>
+                <td colspan="2">#</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Industry-Standard</td>
+                <td colspan="2">#</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>US-Financial</td>
+                <td colspan="2">#</td>
+              </tr>
+            </tbody>
+      </table>
+{%endblock%}

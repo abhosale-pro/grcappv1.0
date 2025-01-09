@@ -1,0 +1,97 @@
+{% extends "/layout.html" %} {%block body%}
+<div class="container hero-unit">
+  <div
+    id="carouselExampleDark"
+    class="carousel carousel-dark slide m-5"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img
+          src="https://images.unsplash.com/photo-1462826303086-329426d1aef5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvbXBhbnl8ZW58MHx8MHx8fDI%3D"
+          class="d-block w-100"
+          alt="Governance"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-light fw-bolder">GOVERNANCE</h5>
+          <p class="text-light fw-bolder">
+            Enterprise governance activities are designed to ensure that the
+            information that reaches our executive team is complete, accurate
+            and timely.
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img
+          src="https://images.unsplash.com/photo-1614064745490-83abb17303e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHJpc2slMjBtYW5hZ2VtZW50fGVufDB8fDB8fHwy"
+          class="d-block w-100"
+          alt="Risk Management"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-light text-uppercase fw-bolder">Risk Management</h5>
+          <p class="text-light fw-bolder">
+            Ensure that management identifies, analyzes, and responds
+            appropriately to risks that may adversely affect realization of your
+            business objectives.
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGxlZ2FsfGVufDB8MHwwfHx8Mg%3D%3D"
+          class="d-block w-100"
+          alt="Compliance Management"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-light text-uppercase fw-bolder">Compliance</h5>
+          <p class="text-light fw-bolder my-3">
+            Assess compliance and the risks and potential costs of
+            non-compliance in order to prioritize, fund and initiate corrective
+            action.
+          </p>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleDark"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleDark"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+{%endblock%}

@@ -1,0 +1,256 @@
+{% extends "/layout.html" %} {%block body%}
+<nav aria-label="Page navigation Doc-program">
+  <ul class="pagination mt-3">
+    <li class="page-item">
+      <a class="page-link text-secondary" href="/gov-dp">Document Hierarchy</a>
+    </li>
+    <li class="page-item">
+      <button
+        type="button"
+        class="btn btn-dark"
+        data-bs-toggle="modal"
+        data-bs-target="#add-doc-modal"
+      >
+        +
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<div
+  class="modal fade"
+  id="add-doc-modal"
+  tabindex="-1"
+  aria-labelledby="add-doc-modalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="add-doc-modallabel">
+          Document Form Details
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <select class="form-select mb-3" id="Doc-type" required="">
+          <option value="">Document Type...</option>
+          <option>Policies</option>
+          <option>Guidelines</option>
+          <option>Standards</option>
+          <option>Procedures</option>
+        </select>
+        <div class="mb-3">
+          <label for="add-doc-name" class="form-label">Document Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="add-doc-name"
+            placeholder="Enter Document Name.."
+          />
+        </div>
+        <select class="form-select mb-3" id="Framework-select" required="">
+          <option value="">Frameworks...</option>
+          <option>Nist-Csf</option>
+        </select>
+        <select class="form-select mb-3" id="Control-select" required="">
+          <option value="">Controls Id...</option>
+          <option>MFA-Authenticator</option>
+        </select>
+        <select class="form-select mb-3" id="Team-select" required="">
+          <option value="">Team</option>
+          <option>...</option>
+        </select>
+        <div class="mb-3">
+          <label for="add-doc-owner" class="form-label">Document Owner</label>
+          <input
+            type="text"
+            class="form-control"
+            id="add-doc-owner"
+            placeholder="Enter Document Owner.."
+          />
+        </div>
+        <div class="mb-3">
+          <label for="add-doc-date" class="form-label">Creation Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="add-doc-date"
+            placeholder="Enter Creation Date.."
+          />
+        </div>
+        <div class="mb-3">
+          <label for="add-doc-rev-date" class="form-label">Review Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="add-doc-rev-date"
+            placeholder="Enter Review Date.."
+          />
+        </div>
+        <div class="mb-3">
+          <label for="add-doc-app-date" class="form-label">Approval Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="add-doc-app-date"
+            placeholder="Enter Approval Date.."
+          />
+        </div>
+        <div class="mb-3">
+          <label for="add-doc-freq" class="form-label"
+            >Frequency in Day(s)</label
+          >
+          <input
+            type="number"
+            min="0"
+            name="review_frequency"
+            value="0"
+            class="form-control"
+            placeholder="Enter Frequency.."
+            id="add-doc-freq"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="add-doc-approver" class="form-label">Approver Name</label>
+          <input
+            type="text"
+            min="0"
+            name="approver_name"
+            class="form-control"
+            placeholder="Enter Approver.."
+            id="add-doc-freq"
+          />
+        </div>
+        <select class="form-select mb-3" id="Doc-status" required="">
+          <option>Draft</option>
+          <option>Approved</option>
+          <option>Under Review</option>
+        </select>
+        <div class="file-uploader">
+          <label for="">File Upload:</label>
+          <div class="input-group">
+            <input
+              required=""
+              type="text"
+              class="form-control readonly"
+              style="width: 50%; margin-bottom: 0px; cursor: default"
+            />
+            <label for="file-upload" class="btn btn-secondary btn-submit m-r-10"
+              >Choose File</label
+            >
+            <label class="ms-1 align-self-center">Max 5 Mb</label>
+          </div>
+          <input
+            required=""
+            type="file"
+            id="file-upload"
+            name="file[]"
+            class="d-none"
+          />
+          <label id="file-size" for="" class="d-none"></label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table class="table table-hover" id="document-dp-tb">
+  <thead>
+    <tr>
+      <th scope="col">Document Name</th>
+      <th scope="col">Document Type</th>
+      <th scope="col">Control Frameworks</th>
+      <th scope="col">Controls</th>
+      <th scope="col">Creation Date</th>
+      <th scope="col">Approval Date</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">#</th>
+      <td>#</td>
+      <td>#</td>
+      <td>#</td>
+      <td>#</td>
+      <td>#</td>
+      <td>#</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- add-doc Modal -->
+<div
+  class="modal fade"
+  id="add-frame-modal"
+  tabindex="-1"
+  aria-labelledby="add-frame-modalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="add-frame-modallabel">
+          Framework Form Details
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="add-framework-form" class="form-label"
+            >Framework Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="add-framework-form"
+            placeholder="Enter framework title.."
+          />
+        </div>
+        <div class="mb-3">
+          <label for="add-framework-form" class="form-label">Type</label>
+          <input
+            type="text"
+            class="form-control"
+            id="add-framework-form"
+            placeholder="Enter framework type.."
+          />
+        </div>
+        <div class="mb-3">
+          <label for="frameworkFormControlTextarea1" class="form-label"
+            >Description</label
+          >
+          <textarea
+            class="form-control"
+            id="frameworkFormControlTextarea1"
+            rows="3"
+          ></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}

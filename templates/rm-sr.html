@@ -1,0 +1,343 @@
+{% extends "/layout.html" %} {%block body%}
+<div class="py-5 text-center">
+  <div class="py-5 text-center">
+    <h2>Risk Submission Form</h2>
+    <p class="lead">
+      Complete the form below to document a risk for an asset for consideration
+      in Risk Management Process
+    </p>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label>Subject:</label>
+    </div>
+    <div class="col-8">
+      <input
+        maxlength="300"
+        title="Subject"
+        required=""
+        name="subject"
+        id="subject"
+        class="form-control"
+        type="text"
+      />
+    </div>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label>Risk Group:</label>
+    </div>
+    <div class="col-8">
+      <select
+        class="form-select"
+        aria-label="Small select example"
+        name="risk_catalog_grouping"
+        id="risk_catalog_grouping"
+        aria-label="risk_catalog_grouping"
+      >
+        <option value="1" selected="selected">Access Control (AC)</option>
+        <option value="2">Asset Management (AM)</option>
+        <option value="3">Business Continuity (BC)</option>
+        <option value="4">Exposure (E)</option>
+        <option value="5">Incident Response (IR)</option>
+        <option value="6">Situational Awareness (SA)</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label>Risk Category:</label>
+    </div>
+    <div class="col-8 d-flex align-items-center justify-content-start">
+      <select
+        class="form-select"
+        aria-label="risk-category-select"
+        name="risk_catalog_grouping"
+        id="risk-category-select"
+        aria-label="risk-category-select"
+      >
+        <option value="1" selected="selected">--</option>
+        <option value="2">Enviromental Resilience</option>
+        <option value="3">Monitoring</option>
+        <option value="4">Physical Security</option>
+        <option value="5">Policy & Procedures</option>
+        <option value="6">Sensitive Data Management</option>
+        <option value="7">Technical Vulnerability Management</option>
+        <option value="8">Third party Management</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label>Risk Source:</label>
+    </div>
+    <div class="col-8 d-flex align-items-center justify-content-start">
+      <select
+        class="form-select"
+        aria-label="risk-category-select"
+        name="risk_catalog_grouping"
+        id="risk-category-select"
+        aria-label="risk-category-select"
+      >
+        <option value="1" selected="selected">External</option>
+        <option value="2">People</option>
+        <option value="3">Process</option>
+        <option value="4">System</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label class="fs-10">Threat Mapping:</label>
+    </div>
+    <div class="col-8 d-flex align-items-center justify-content-start">
+      <select
+        class="form-select"
+        aria-label="Small select example"
+        name="risk_catalog_grouping"
+        id="risk_catalog_grouping"
+        aria-label="risk_catalog_grouping"
+      >
+        <option value="1" selected="selected">
+          MT-1 Civil or Political Unrest.
+        </option>
+        <option value="2">MT-2 Hacking & Other Cybersecurity Crimes</option>
+        <option value="3">MT-3 Hazardous Materials Emergencies</option>
+        <option value="4">
+          MT-4 Nuclear, Biological and Chemical (NBC) Weapons.
+        </option>
+        <option value="5">MT-5 Physical Crime</option>
+        <option value="6">MT-6 Terrorism & Armed Attacks</option>
+        <option value="7">MT-7 Utility Service Disruption.</option>
+        <option value="8">MT-8 Dysfunctional Management Practices.</option>
+        <option value="9">MT-9 Human Error</option>
+        <option value="10">MT-10 Technical / Mechanical Failure</option>
+        <option value="11">
+          MT-11 Statutory / Regulatory / Contractual Obligation
+        </option>
+        <option value="12">
+          MT-12 Redundant, Obsolete/Outdated, Toxic or Trivial (ROT) Data.
+        </option>
+        <option value="13" selected="selected">
+          NT-1 Drought & Water Shortage)
+        </option>
+        <option value="14">NT-2 Earthquakes</option>
+        <option value="15">NT-3 Fire & Wildfires</option>
+        <option value="16">NT-4 Floods</option>
+        <option value="17">NT-5 Hurricanes & Tropical Storms</option>
+        <option value="18">NT-6 Landslides & Debris Flow</option>
+        <option value="19">NT-7 Pandemic (Disease) Outbreaks</option>
+        <option value="20">NT-8 Severe Weather</option>
+        <option value="21">NT-9 Space Weather</option>
+        <option value="22">NT-10 Thunderstorms & Lightning</option>
+        <option value="23">NT-11 Tornadoes</option>
+        <option value="24">NT-10 Thunderstorms & Lightning</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label>Risk Score Method:</label>
+    </div>
+    <div class="col-8 d-flex align-items-center justify-content-start">
+      <select
+        class="form-select"
+        aria-label="risk-category-select"
+        name="risk_catalog_grouping"
+        id="risk-category-select"
+        aria-label="risk-category-select"
+      >
+        <option value="1" selected="selected">Classic</option>
+        <option value="2">CVSS</option>
+        <option value="3">Dread</option>
+        <option value="4">OWASP</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label>Current Likelihood:</label>
+    </div>
+    <div class="col-8 d-flex align-items-center justify-content-start">
+      <select
+        class="form-select"
+        aria-label="risk-category-select"
+        name="risk_catalog_grouping"
+        id="risk-category-select"
+        aria-label="risk-category-select"
+      >
+        <option value="1" selected="selected">Remote</option>
+        <option value="2">Unlikely</option>
+        <option value="3">Credible</option>
+        <option value="4">Likely</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label>Current Impact:</label>
+    </div>
+    <div class="col-8 d-flex align-items-center justify-content-start">
+      <select
+        class="form-select"
+        aria-label="risk-category-select"
+        name="risk_catalog_grouping"
+        id="risk-category-select"
+        aria-label="risk-category-select"
+      >
+        <option value="1" selected="selected">Insignificant</option>
+        <option value="2">Minor</option>
+        <option value="3">Moderate</option>
+        <option value="4">Major</option>
+        <option value="4">Extreme/Catastrophic</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label>Control Regulation:</label>
+    </div>
+    <div class="col-8 d-flex align-items-center justify-content-start">
+      <select
+        class="form-select"
+        aria-label="risk-category-select"
+        name="risk_catalog_grouping"
+        id="risk-category-select"
+        aria-label="risk-category-select"
+      >
+        <option value="1" selected="selected">---</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label>Control Number:</label>
+    </div>
+    <div class="col-8">
+      <input
+        maxlength="300"
+        title="Subject"
+        required=""
+        name="subject"
+        id="subject"
+        class="form-control"
+        type="text"
+      />
+    </div>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label>Assets in Scope</label>
+    </div>
+    <div class="col-8 d-flex align-items-center justify-content-start">
+      <select
+        class="form-select"
+        aria-label="risk-category-select"
+        name="risk_catalog_grouping"
+        id="risk-category-select"
+        aria-label="risk-category-select"
+      >
+        <option value="1" selected="selected">---</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label>Team</label>
+    </div>
+    <div class="col-8 d-flex align-items-center justify-content-start">
+      <select
+        class="form-select"
+        aria-label="risk-category-select"
+        name="risk_catalog_grouping"
+        id="risk-category-select"
+        aria-label="risk-category-select"
+      >
+        <option value="1" selected="selected">---</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label>Technology</label>
+    </div>
+    <div class="col-8 d-flex align-items-center justify-content-start">
+      <select
+        class="form-select"
+        aria-label="risk-category-select"
+        name="risk_catalog_grouping"
+        id="risk-category-select"
+        aria-label="risk-category-select"
+      >
+        <option value="1" selected="selected">---</option>
+        <option value="2">Backups</option>
+        <option value="3">VM-ware</option>
+        <option value="4">VPN</option>
+        <option value="5">Windows Servers</option>
+        <option value="6">Linux Servers</option>
+        <option value="7">Data Center</option>
+        <option value="8">Networking</option>
+        <option value="8">Power</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label>Owner</label>
+    </div>
+    <div class="col-8 d-flex align-items-center justify-content-start">
+      <select
+        class="form-select"
+        aria-label="risk-category-select"
+        name="risk_catalog_grouping"
+        id="risk-category-select"
+        aria-label="risk-category-select"
+      >
+        <option value="1" selected="selected">---</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label>Owner's Manager</label>
+    </div>
+    <div class="col-8 d-flex align-items-center justify-content-start">
+      <select
+        class="form-select"
+        aria-label="risk-category-select"
+        name="risk_catalog_grouping"
+        id="risk-category-select"
+        aria-label="risk-category-select"
+      >
+        <option value="1" selected="selected">---</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div class="col-2 d-flex align-items-center justify-content-start mx-2">
+      <label>Supporting Documentation:</label>
+    </div>
+    <div class="col-8 d-flex align-items-center justify-content-start">
+      <div class="input-group mb-3">
+        <input type="file" class="form-control" id="inputGroupFile02" />
+        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+      </div>
+    </div>
+  </div>
+  <div class="row mx-1 mb-2">
+    <div>
+      <button
+        type="button"
+        name="submit"
+        class="btn btn-submit btn-primary text-end save-risk-form"
+      >
+        Submit Risk
+      </button>
+      <button class="btn btn-secondary" id="reset_form" type="reset">
+        Clear Form
+      </button>
+    </div>
+  </div>
+  {%endblock%}
+</div>

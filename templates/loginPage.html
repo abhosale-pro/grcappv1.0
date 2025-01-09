@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>GRC-APP Login Page</title>
+  </head>
+  <body>
+    {% include "includes/_message.html"%}
+    <div class="GRC-logo">
+      <img src="../static/logogrc.png" alt="GRC Logo" class="img-thumbnail border-0 shadow-lg"/>
+    </div>
+    <div class="page-wrapper my-5">
+        <div class="scroll-content">
+            <div class="content-wrapper">
+                <!-- container - It's the direct container of all the -->
+                <div class="content container-fluid">
+                    <div class="container login-form">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <h3 class="text-uppercase fw-bold">
+                                    Governance Risk Compliance Console
+                                  </h3>
+                                <div class="card">
+                                    <form class="loginForm" action="" method="post" name="authenticate">
+                                        <div class="card-body">
+                                            <h6 class="card-title text-uppercase ">Login with your Credentials:</h6>
+                                            <div class="form-group">
+                                                <label>Username</label>
+                                                <input type="text" class="form-control user" id="user" name="user" required/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Password</label>
+                                                <input type="password" class="form-control pass" id="pass" name="pass" required/>
+                                            </div>
+                                            <div class="form-group my-2">
+                                                <div>
+                                                    <a type="reset" class="btn btn-dark" href="/register">Register</a>
+                                                    <a type="submit" class="btn btn-submit" name="submit" value="submit" href="/loginPage">Login</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End of content -->
+            </div>
+            <!-- End of content-wrapper -->
+<!-- FOOTER -->
+ <div><hr></div>
+<footer class="container float-start">
+  <p class="float-end"><a href="loginPage.html">Back to top</a></p>
+  <p>&copy; 2024 Atul Bhosale SRM Institute of Science and Technlogy &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+</footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

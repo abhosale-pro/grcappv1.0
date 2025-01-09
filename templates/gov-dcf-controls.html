@@ -1,0 +1,108 @@
+{% extends "/layout.html" %} {%block body%}
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link Frameworks" aria-current="page" href="/gov-dcf">Frameworks</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/gov-dcf-controls">Controls</a>
+  </li>
+</ul>
+<div class="mx-3 pt-3">
+  <div class="btn-group" role="group" id="framework-controls-btn-group" aria-label="frame-workgroup">
+    <a href="/gov-dcf-controls" class="btn btn-primary active" aria-current="page">Framework Controls</a>
+    <!-- Button trigger add-framework modal -->
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#add-controls-modal">+</button>
+    <!-- Button trigger add-framework modal -->
+    <button type="button" class="btn btn-secondary">-</button>
+  </div>
+</div>
+</div>
+
+<!-- add-framework Modal -->
+<div class="modal fade" id="add-controls-modal" tabindex="-1" aria-labelledby="add-frame-modalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="add-frame-modallabel">Controls Form Details</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <div class="mb-3">
+        <label for="add-control-class" class="form-label">Control Class</label>
+        <input type="text" class="form-control" id="add-control-class" placeholder="Enter Control Class..">
+      </div>
+      <div class="mb-3">
+        <label for="add-control-phase" class="form-label">Control Phase</label>
+        <input type="text" class="form-control" id="add-control-phase" placeholder="Enter Control Phase..">
+      </div>
+      <div class="mb-3">
+        <label for="add-control-owner" class="form-label">Control Owner</label>
+        <input type="text" class="form-control" id="add-control-owner" placeholder="Enter Control Owner..">
+      </div>
+      <div class="mb-3">
+        <label for="add-control-framework" class="form-label">Control Framework</label>
+        <input type="text" class="form-control" id="add-control-framework" placeholder="Enter Control Framework..">
+      </div>
+      <div class="mb-3">
+        <label for="add-control-priority" class="form-label">Control Priority</label>
+        <input type="text" class="form-control" id="add-control-priority" placeholder="Enter Control Priority..">
+      </div>
+      <div class="mb-3">
+        <label for="add-control-Name" class="form-label">Control Name</label>
+        <input type="text" class="form-control" id="add-control-Name" placeholder="Enter Control Name..">
+      </div>
+      <div class="mb-3">
+        <label for="add-asset-id" class="form-label">Asset Id</label>
+        <input type="text" class="form-control" id="add-asset-id" placeholder="Enter Asset Id..">
+      </div>
+      <select class="form-select mb-3" id="control-type" required="">
+        <option value="">Control Type...</option>
+        <option>Unassigned</option>
+        <option>Standalone</option>
+        <option>Process</option>
+        <option>Enterprise</option>
+      </select>
+      <select class="form-select" id="control-status" required="">
+        <option value="">Control Status...</option>
+        <option>In Progress</option>
+        <option>Deferred</option>
+        <option>Complete</option>
+        <option>Under Review</option>
+      </select>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+  </div>
+</div>
+</div>
+  <table class="table table-hover" id="controls-tb">
+          <thead>
+            <tr>
+              <th scope="col">Control Class</th>
+              <th scope="col">Control Phase</th>
+              <th scope="col">Control Owner</th>
+              <th scope="col">Control Framework</th>
+              <th scope="col">Control Priority</th>
+              <th scope="col">Control Name</th>
+              <th scope="col">Asset Id</th>
+              <th scope="col">Control Type</th>
+              <th scope="col">Control Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>#</td>
+              <td>#</td>
+              <td>#</td>
+              <td>#</td>
+              <td>#</td>
+              <td>#</td>
+              <td>#</td>
+              <td>#</td>
+            </tr>
+          </tbody>
+    </table>
+{%endblock%}

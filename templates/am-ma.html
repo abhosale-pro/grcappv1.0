@@ -1,0 +1,203 @@
+{% extends "/layout.html" %} {%block body%}
+<!-- Verfied Assets nav tabs-->
+<div>
+  <nav class="nav nav-tabs" role="tablist">
+    <!-- Button trigger add-framework modal -->
+    <button
+      type="button"
+      class="btn btn-danger"
+      data-bs-toggle="modal"
+      data-bs-target="#add-assets-modal"
+    >
+      +
+    </button>
+    <a
+      class="nav-link active"
+      data-bs-target="#verified_assets"
+      data-bs-toggle="tab"
+      aria-selected="true"
+      role="tab"
+      >Verified Assets</a
+    >
+    <a
+      class="nav-link"
+      data-bs-target="#unverified_assets"
+      data-bs-toggle="tab"
+      aria-selected="false"
+      tabindex="-1"
+      role="tab"
+      >Unverified Assets</a
+    >
+  </nav>
+</div>
+
+<!-- add-assets Modal -->
+<div
+  class="modal fade"
+  id="add-assets-modal"
+  tabindex="-1"
+  aria-labelledby="add-assets-modalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="add-assets-modallabel">
+          Assets Input Form
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="add-assets-name" class="form-label"
+            >Asset Name<span class="required">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="add-framework-name"
+            placeholder="Enter Asset name.."
+          />
+        </div>
+        <div class="mb-3">
+          <label for="add-assets-ip" class="form-label"
+            >IP Address<span class="required">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="add-assets-ip"
+            placeholder="Enter IP Address"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="add-assets-loc" class="form-label"
+            >Asset Location<span class="required">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="add-assets-loc"
+            placeholder="Enter Asset location"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="add-assets-team" class="form-label"
+            >Team<span class="required">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="add-assets-team"
+            placeholder="Enter Team name"
+          />
+        </div>
+        <label class="col-3" for="create_value-asset_verified-asset_fields"
+          >Asset Valuation<span class="required">*</span></label
+        >
+        <select
+          class="form-select create_input"
+          required=""
+          id="value"
+          name="value"
+        >
+          <option value="1">$0 to $100,000</option>
+          <option value="2">$100,001 to $200,000</option>
+          <option value="3">$200,001 to $300,000</option>
+          <option value="4">$300,001 to $400,000</option>
+          <option value="5">$400,001 to $500,000</option>
+          <option value="6">$500,001 to $600,000</option>
+          <option value="7">$600,001 to $700,000</option>
+          <option value="8">$700,001 to $800,000</option>
+          <option value="9">$800,001 to $900,000</option>
+          <option value="10">$900,001 to $1,000,000</option>
+        </select>
+        <div class="mb-3">
+          <label for="assets-desc" class="form-label">Description</label>
+          <textarea class="form-control" id="assets-desc" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Asset Name</th>
+      <th scope="col">Ip Address</th>
+      <th scope="col">Asset Valuation</th>
+      <th scope="col">Site/Location</th>
+      <th scope="col">Team</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Application</th>
+      <td>127.0.0.1</td>
+      <td>#</td>
+      <td>#</td>
+      <td>#</td>
+      <td>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="add-switch"
+          />
+          <label class="form-check-label" for="add-switch">Add/Delete</label>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Network segment</th>
+      <td>127.0.0.1</td>
+      <td>#</td>
+      <td>#</td>
+      <td>#</td>
+      <td>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="add-switch"
+          />
+          <label class="form-check-label" for="add-switch">Add/Delete</label>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">System</th>
+      <td>127.0.0.1</td>
+      <td>#</td>
+      <td>#</td>
+      <td>#</td>
+      <td>
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="add-switch"
+          />
+          <label class="form-check-label" for="add-switch">Add/Delete</label>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+{%endblock%}

@@ -1,0 +1,211 @@
+<div class="container-fluid">
+    <header class="blog-header py-3">
+      <div class="row flex-nowrap justify-content-between align-items-center ">
+        <div class="col-6 pt-1">
+          <div class="GRC-logo">
+            <img src="../static/logogrc.png" alt="GRC Logo" class="img-thumbnail border-0 shadow-lg"/>
+          </div>
+        </div>
+        <div class="col-3 justify-content-center align-items-end">
+          <a class="btn btn-outline-primary text-uppercase p-1" href="/loginPage">log Out</a>
+        </div>
+      </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+
+            <li class="nav-item dropdown" id="gov-list">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Governance
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item" id="gov-dcf" href="/gov-dcf"
+                    >Define Control Frameworks</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/gov-dp">Document Program</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/gov-de" 
+                    >Define Exceptions</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown" id="RM-list">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Risk Management
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item" href="/rm-sr" id="RM-SR">Submit Risk</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" id="RM-PM"
+                    >Plan Mitigation</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" id="RM-PR"
+                    >Perform Reviews</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" id="RM-RR"
+                    >Review Regularly</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown" id="Compliance-lists">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Compliance</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#" id="Compliance-DT"
+                    >Define Tests</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" id="Compliance-IA"
+                    >Initiate Audits</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" id="Compliance-AA"
+                    >Active Audits</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown" id="asset-lists">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Assets</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/am-ma" id="asset-MA"
+                    >Manage Assets</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" id="asset-MAG"
+                    >Manage Asset Groups</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown" id="assessments-lists">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Assessments</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#" id="assessments-csc"
+                    >Critical Security Controls</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" id="assessments-ncsf"
+                    >NIST CSF</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" id="assessments-HIPAA"
+                    >HIPAA</a
+                  >
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/assess-pcidss" id="assessments-pci"
+                    >PCI DSS v4.0</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown" id="reporting-lists">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Reporting</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#" id="reporting-AP"
+                    >Risk Apetite Report</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" id="reporting-SrByDate"
+                    >Risk Submission by Date</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" id="reporting-MrByDate"
+                    >Management Review by Date</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</nav>
